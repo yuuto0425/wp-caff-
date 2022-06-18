@@ -1,0 +1,60 @@
+@import 'responsive';
+@import  'variable';
+@import 'reset';
+@import 'common';
+
+
+/////////////////
+//shop-page
+
+.shop_first_view {
+    background-image: url(../img/img_firstview_shop.png);
+}
+
+.access_shop_wrapper {
+    background:$bg_default;
+    &::before {
+        content:'';
+        display:none;
+    }
+    &::after {
+        content:'';
+        display:none;
+    }
+}
+
+.access_shop_section_head {
+    &::before {
+        content:'';
+        display:none;
+    }
+}
+
+.access_shop_section_title {
+    font-family: $font_ja;
+    font-weight: bold;
+    font-size: 24px;
+    text-align:left;
+    padding-left: 22px;
+    position:relative;
+    &::before {
+        content:'';
+        position:absolute;
+        left: 0;
+        top: 50%;
+        transform:translateY(-50%);
+        width: 6px;
+        height: 100%;
+        background:#382620;
+    }
+}
+
+
+
+
+
+
+
+
+//shop-page
+//////////////////

@@ -1,0 +1,316 @@
+@import 'responsive';
+@import  'variable';
+@import 'reset';
+@import 'common';
+
+
+/////////////////
+//gift-page
+
+// aタグリンクhover時
+// .gift_list_item_link_top,
+// .gift_list_item_link_bottom {
+//     &:hover {
+//         color:#222;
+//         background: #FFF;
+//         transition:all 0.3s ease 0s;
+//     }
+// }
+
+.gift_first_view {
+    background-image: url(../img/img_firstview_gift.png);
+}
+
+.gift_wrapper {
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 40px;
+}
+.gift_lists_row_top {
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.gift_list_top_pickup {
+    @include mq('pc') {
+        width:50%;
+    }
+    @include mq('sp') {
+        width: 100%;
+    }
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+    align-items:start;
+    .gift_list_top {
+        width: 100%;
+        height: auto;
+    }
+    .gift_list_item_top {
+        width: 100%;
+        img {
+            width: 100%;
+    
+        }
+    }
+    .gift_list_item_body_top {
+        margin-top: 12px;
+        width: 100%;
+    }
+    .gift_list_item_title_top {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .gift_list_item_price_top {
+        display: block;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 14px;
+    }
+    .gift_list_item_link_top {
+        display: block;
+        width: 33%;
+        margin: 15px auto 0;
+        text-align: center;
+        padding: 12px 24px;
+        color:#FFF;
+        background: #222;
+        @include mq('sp') {
+            width: 80%;
+        }
+        &:hover {
+            color:#222;
+            background: #FFF;
+            transition:all 0.3s ease 0s;
+            border: 1px solid #222;
+        }
+    }
+}
+.gift_list_top_no_pickup {
+    @include mq('pc') {
+        width: 46%;
+        margin-left: 40px;
+    }
+    @include mq('sp') {
+        width: 100%;
+        justify-content: center;
+    }
+    display: flex;
+    flex-wrap:wrap;
+    .gift_list_top {
+        width: 45%;
+        &:nth-child( n + 3 ) {
+            margin-top: 40px;
+        } 
+        @include mq('pc') {
+            &:nth-child( even ) {
+                margin-left: 40px;
+            } 
+        }
+        @include mq('sp') {
+            margin-top: 20px;
+            &:nth-child( even ) {
+                margin-left: 20px;
+            }  
+        }
+    }
+    .gift_list_item_top {
+        width: 100%;
+        img {
+            width: 100%;
+    
+        }
+    }
+    .gift_list_item_body_top {
+        margin-top: 12px;
+        width: 100%;
+    }
+    .gift_list_item_title_top {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .gift_list_item_price_top {
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 9px;
+    }
+    .gift_list_item_link_top {
+        display: block;
+        width: 80%;
+        margin: 15px auto 0;
+        text-align: center;
+        padding: 12px 24px;
+        color:#FFF;
+        background: #222;
+        font-size: 14px;
+        @include mq('sp') {
+            font-size: 12px;
+            width: 95%;
+            padding: 9px 16px;
+        }
+        &:hover {
+            color:#222;
+            background: #FFF;
+            transition:all 0.3s ease 0s;
+            border: 1px solid #222;
+        }
+    }
+}
+.gift_lists_row_bottom {
+    width:100%;
+    margin-top: 44px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.gift_list_bottom {
+
+    @include mq('pc') {
+        width: 22%;
+        &:not(:first-child) {
+            margin-left: 40px;
+        }
+    }
+    @include mq('sp') {
+        width: 45%;
+        &:nth-child( n + 3 ) {
+            margin-top: 40px;
+        } 
+    }
+}
+.gift_list_item_bottom {
+    img {
+
+    }
+}
+.gift_list_item_body_bottom {
+    margin-top: 12px;
+    width: 100%;
+}
+.gift_list_item_title_bottom {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.gift_list_item_price_bottom {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 9px;
+}
+.gift_list_item_link_bottom {
+    display: block;
+    width: 80%;
+    margin: 15px auto 0;
+    text-align: center;
+    padding: 12px 24px;
+    color:#FFF;
+    background: #222;
+    @include mq('sp') {
+        font-size: 12px;
+        width: 95%;
+        padding: 9px 16px;
+    }
+    &:hover {
+        color:#222;
+        background: #FFF;
+        transition:all 0.3s ease 0s;
+        border: 1px solid #222;
+    }
+}
+
+.gift_info_wrapper {
+    @include mq("pc") {
+        width: $width__inner__pc;
+    }
+    @include mq("tab") {
+        width: $width__inner__tab;
+    }
+    @include mq("sp") {
+        width: $width__inner__sp;
+    }
+    max-width: 100%;
+    margin: 100px auto 100px;
+    background: $bg_white;
+    border: 4px solid #382620;
+    padding: 5px;
+}
+.gift_info_wrap {
+    border: 1px solid #382620;
+
+}
+.gift_info {
+
+}
+.gift_info_body {
+    @include mq('pc') {
+        display:flex;
+        padding: 70px 50px;
+    }
+    @include mq('sp') {
+        padding: 30px;
+    }
+    justify-content: center;
+
+}
+.gift_info_body_left {
+    @include mq('pc') {
+        width: 50%;
+    }
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+.gift_info_body_left_top {
+    display: block;
+    @include mq('sp') {
+        font-size: 16px;
+    }
+    @include mq('pc') {
+        width: 90%;
+        padding-bottom: 40px;
+        font-size: 24px;
+    }
+    font-weight: bold;
+    position: relative;
+    line-height:calc( 40 / 24 );
+    &::after {
+        content: '';
+        border-top: 4px dotted #382620;
+        width: 100%;
+        position:absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+.gift_info_body_left_bottom {
+    @include mq('pc') {
+        width: 90%;
+        margin-top: 80px;
+    }
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 40px;
+    }
+    font-size: 16px;
+    line-height: 2;
+}
+.gift_info_body_right {
+    @include mq('pc') {
+        width: 50%;
+    }
+    @include mq('sp') {
+        width: 100%;
+    }
+    img {
+
+    }
+}
+
+//gift-page
+/////////////////
